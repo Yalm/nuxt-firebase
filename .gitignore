@@ -91,3 +91,6 @@ sw.*
 
 # Firebase files
 .firebase
+
+# Firebase public folder
+public/
