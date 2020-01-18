@@ -1,5 +1,8 @@
 {
     "hosting": {
+        "predeploy": [
+            "rm -rf public/* && mkdir -p public/nuxt && cp -r functions/.nuxt/dist/client/ public/nuxt"
+        ],
         "public": "public",
         "ignore": [
             "firebase.json",
@@ -14,6 +17,8 @@
         ]
     },
     "functions": {
-
+        "predeploy": [
+            "cp ./nuxt.config.js functions/"
+        ]
     }
 }
